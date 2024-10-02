@@ -1,0 +1,149 @@
+/* General Styles */
+* {
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html, body {
+    height: 100%; /* Ensure body takes full height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+}
+
+/* Content Area */
+.content {
+    flex: 1; /* Allows the content to grow and fill available space */
+    text-align: center;
+    margin: 50px; /* Adjust this margin if you want space around the content */
+}
+
+/* Top Banner */
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff787a;
+    color: white;
+    padding: 10px 20px;
+}
+
+.banner-left {
+    display: flex;
+    align-items: center;
+}
+
+.banner-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.banner-left h1 {
+    margin: 0;
+}
+
+.banner-right {
+    display: flex;
+    align-items: center;
+}
+
+.banner-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.banner-right a:hover {
+    text-decoration: underline;
+}
+
+/* Image Section */
+.image-row {
+    display: flex;
+    justify-content: center; /* Centering the items */
+    align-items: flex-start; /* Align items to the top */
+    gap: 200px; /* Space between images */
+    padding: 80px; /* Space around the image row */
+    background-color: #ffffff; /* Light background for image section */
+    height: 100%; /* Set a height for the image-row */
+}
+
+.image-item {
+    display: flex; /* Enable flexbox for the item */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    max-width: 250px; /* Set max width for each item */
+    flex: 0 1 auto; /* Allow items to be flexible, but not grow beyond their content */
+}
+
+/* Image Item Styles */
+.image-item img {
+    width: 100%; /* Fill the width of the image-item */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin: 20px 0; /* Add margin above and below */
+}
+
+.youtube-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #FF0000; /* YouTube red */
+    color: white; /* White text */
+    padding: 15px 30px; /* Padding for button */
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold; /* Bold text */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.unav-youtube-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #c1c1c1; /* YouTube red */
+    color: white; /* White text */
+    padding: 15px 30px; /* Padding for button */
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold; /* Bold text */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.youtube-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Bottom Banner */
+.bottom-banner {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 35px 0; /* Padding for top and bottom */
+    width: 100%; /* Fill the entire width */
+    margin: 0; /* No margin to avoid gaps */
+    clear: both; /* Ensures it is below any floated elements */
+}
+
+.admin-name {
+    padding: 10px;
+    font-size: 10px;
+    width: 150%; /* Note: This is a large width; you might want to adjust it */
+}
+
+.content-main {
+    margin: 10px;
+}
+
+.admin-desc {
+    margin: 10px;
+    text-align: center; /* Centering text in admin description */
+    width: 164%
+}
