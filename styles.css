@@ -1,94 +1,112 @@
+/* General body settings */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Top banner */
 .top-banner {
-    display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-between; /* Space between left and right content */
-    align-items: center; /* Center vertically */
-    background-color: #ff787a; /* Green background */
-    color: white; /* White text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    background-color: #ff787a;
+    color: white;
     padding: 10px 20px;
 }
 
 .banner-left {
-    display: flex; /* Use flexbox to align logo and text */
-    align-items: center; /* Center vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 10px; /* Add margin for spacing */
 }
 
 .banner-logo {
-    width: 40px; /* Set the width of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and text */
-}
-
-.banner-left h1 {
-    margin: 0;
+    width: 30px; /* Smaller logo size for mobile */
+    height: auto;
+    margin-right: 10px;
 }
 
 .banner-right {
-    display: flex; /* Use flexbox to align links horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
 }
 
 .banner-right a {
     color: white;
     text-decoration: none;
-    margin-left: 20px; /* Space between links */
-}
-
-.banner-right a:hover {
-    text-decoration: underline;
-}
-
-.banner-right a:hover {
-    text-decoration: underline;
+    margin: 5px; /* Reduced space between links */
 }
 
 .content {
-    text-align: center; /* Center align the text */
+    text-align: center;
     padding: 20px;
 }
 
+/* Image container */
 .image-container {
-    text-align: center; /* Center the image container */
-    margin: 20px 0; /* Add margin for spacing */
+    text-align: center;
+    margin: 20px 0;
     padding: 20px;
 }
 
 .image-container img {
-    max-width: 50%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 90%; /* Larger image size on mobile */
+    height: auto;
 }
 
+/* Button container */
 .button-container {
-    text-align: center; /* Center the button container */
-    margin: 80px 0; /* Add margin for spacing */
+    text-align: center;
+    margin: 50px 0; /* Reduce margin for better mobile spacing */
 }
 
 .discord-button {
-    background-color: #7289DA; /* Discord blue */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 25px 45px; /* Padding for button size */
-    text-decoration: none; /* No underline */
-    font-size: 23px; /* Font size */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px; /* Adjusted padding for mobile */
+    text-decoration: none;
+    font-size: 18px; /* Smaller font size for mobile */
+    transition: background-color 0.3s ease;
 }
 
 .discord-button:hover {
-    background-color: #5b6eae; /* Darker blue on hover */
+    background-color: #5b6eae;
 }
 
+/* Bottom banner */
 .bottom-banner {
-    background-color: #333; /* Dark background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+    .top-banner {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .banner-logo {
+        width: 30px; /* Smaller logo for mobile */
+    }
+
+    .banner-right a {
+        margin: 5px 0; /* Stack links vertically with small spacing */
+    }
+
+    .content, .button-container, .image-container {
+        padding: 10px; /* Reduce padding for better fit on mobile */
+    }
+
+    .discord-button {
+        padding: 10px 20px; /* Further reduce button padding */
+        font-size: 16px; /* Smaller font size for better readability */
+    }
 }
