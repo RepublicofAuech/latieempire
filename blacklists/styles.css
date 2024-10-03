@@ -1,27 +1,27 @@
 /* General Styles */
 * {
-    margin: 0; /* Reset margin for all elements */
-    padding: 0; /* Reset padding for all elements */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-    height: 100%; /* Ensure body takes full height */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+    min-height: 100vh;
 }
 
 /* Content Area */
 .content {
-    flex: 1; /* Allows the content to grow and fill available space */
+    flex: 1;
     text-align: center;
-    margin: 50px; /* Adjust this margin if you want space around the content */
+    margin: 50px;
 }
 
 /* Top Banner */
@@ -65,85 +65,51 @@ body {
 }
 
 /* Image Section */
-.image-row {
+.image-row, .image-row-last, .image-row-not-first {
     display: flex;
-    justify-content: center; /* Centering the items */
-    align-items: flex-start; /* Align items to the top */
-    gap: 200px; /* Space between images */
-    padding: 80px; /* Space around the image row */
-    background-color: #ffffff; /* Light background for image section */
-    height: 100%; /* Set a height for the image-row */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 200px;
+    background-color: #ffffff;
+}
+
+.image-row {
+    padding: 80px;
 }
 
 .image-row-not-first {
-    display: flex;
-    justify-content: center; /* Centering the items */
-    align-items: flex-start; /* Align items to the top */
-    gap: 200px; /* Space between images */
-    background-color: #ffffff; /* Light background for image section */
-    height: 100%; /* Set a height for the image-row */
+    padding: 80px;
 }
 
 .image-row-last {
-    display: flex;
-    justify-content: center; /* Centering the items */
-    align-items: flex-start; /* Align items to the top */
-    gap: 200px; /* Space between images */
-    padding: 100px; /* Space around the image row */
-    background-color: #ffffff; /* Light background for image section */
-    height: 200%; /* Set a height for the image-row */
+    padding: 100px;
+    height: 200%;
 }
 
-/* Image Item Styles for Last Row */
-.image-row-last .image-item {
+/* Image Item */
+.image-item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute content vertically */
-    align-items: center; /* Center items horizontally */
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     max-width: 250px;
     width: 100%;
-    height: 104%; /* Ensure it takes full height */
 }
 
-/* Align the YouTube button to the bottom */
-.image-row-last .youtube-button {
-    margin-top: auto; /* Push button to the bottom */
-    margin-bottom: 10px; /* Add space below the button */
-}
-
-/* Image Item Styles */
 .image-item img {
-    width: 100%; /* Fill the width of the image-item */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: rounded corners */
-    margin: 20px 0; /* Add margin above and below */
-}
-
-/* Image Item Styles for Last Row */
-.image-row .image-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribute content vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center;
-    max-width: 250px;
     width: 100%;
-    height: 85%; /* Ensure it takes full height */
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-/* Align the YouTube button to the bottom */
-.image-row .youtube-button {
-    margin-top: auto; /* Push button to the bottom */
-    margin-bottom: 10px; /* Add space below the button */
-}
-
-/* Center the YouTube button */
+/* YouTube Button */
 .youtube-button, .unav-youtube-button {
     display: block;
-    margin-top: auto; /* Push the button to the bottom */
-    margin-bottom: 10px; /* Add some space at the bottom */
-    background-color: #FF0000; /* YouTube red */
+    margin-top: auto;
+    margin-bottom: 10px;
+    background-color: #FF0000;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -155,40 +121,38 @@ body {
 }
 
 .unav-youtube-button {
-    background-color: #c1c1c1; /* Gray for unavailable button */
+    background-color: #c1c1c1;
 }
 
 .youtube-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
-}
-
-.youtube-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
+    background-color: #cc0000;
 }
 
 /* Bottom Banner */
 .bottom-banner {
-    background-color: #333; /* Dark background */
-    color: white; /* White text */
-    text-align: center; /* Center text */
-    padding: 35px 0; /* Padding for top and bottom */
-    width: 100%; /* Fill the entire width */
-    margin: 0; /* No margin to avoid gaps */
-    clear: both; /* Ensures it is below any floated elements */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+    width: 100%;
+    margin: 0;
+    clear: both;
 }
 
+/* Admin Description and Name */
 .admin-name {
     padding: 10px;
     font-size: 10px;
-    width: 150%; /* Note: This is a large width; you might want to adjust it */
-}
-
-.content-main {
-    margin: 10px;
+    width: 150%;
 }
 
 .admin-desc {
     margin: 10px;
     width: 167%;
-    text-align: center; /* Centering text in admin description */
+    text-align: center;
+}
+
+/* Content Main */
+.content-main {
+    margin: 10px;
 }
